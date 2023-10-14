@@ -63,9 +63,9 @@ export default (model, actions) =>
       b
       .content('')
       .position('absolute')
-      .top('-7vh')
+      .top(0)
       .width('100%')
-      .height('100vh')
+      .height('100%')
       .zIndex(3)
       .opacity(0.1)
       .pointerEvents('none')
