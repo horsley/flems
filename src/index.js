@@ -38,7 +38,8 @@ function Flems(dom, state = {}, runtimeUrl) {
     onloaded: fn => actions.onloaded = fn,
     getLink: actions.getLink,
     set: actions.setState,
-    redraw: redraw
+    redraw: redraw,
+    getEditor: () => model.editor,
   }
 
   function redraw() {

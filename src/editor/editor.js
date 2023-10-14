@@ -51,7 +51,7 @@ modes.js = modes.script
 modes.html = modes.document
 
 export default (model, actions) =>
-  m('div'
+  m('div.cm-wrapper'
   + b.position('absolute')
     .w('100%')
     .top(model.toolbar())
@@ -151,6 +151,7 @@ export default (model, actions) =>
 
       const initialDoc = cm.getDoc()
 
+      model.editor = cm
       model.refreshCm.map(() => cm.refresh())
       model.focus.map(({ line = 0, column = 0, scrollTo = false } = {}) => {
         cm.setCursor(line - 1, column - 1)
