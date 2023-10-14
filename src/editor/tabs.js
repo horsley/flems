@@ -71,7 +71,7 @@ function linkTabs(model, actions) {
 
 function fileTabs(model, actions) {
   return model.state.files.map(file =>
-    tab(
+    !file.hide && tab(
       m('div' + b.display('flex'),
         file.name,
         file.editable === false && icon({ size: 16, class: b.ml(6).class }, lockIcon)
