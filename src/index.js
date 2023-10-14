@@ -40,6 +40,7 @@ function Flems(dom, state = {}, runtimeUrl) {
     set: actions.setState,
     redraw: redraw,
     getEditor: () => model.editor,
+    vertical: () => model.vertical(),
   }
 
   function redraw() {
